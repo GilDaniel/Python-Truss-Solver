@@ -53,4 +53,4 @@ class TrussElement:
         else:
             force_type = "Compression"
 
-        return f"Truss element {nodes[self.node1ID-1].name}-{nodes[self.node2ID-1].name} has a {force_type} normal force: {normal_force_modulus}"
+        return f"Truss element {nodes[self.node1ID-1].name}-{nodes[self.node2ID-1].name} has a {force_type} normal force: {np.round(normal_force_modulus,decimals=8)}"

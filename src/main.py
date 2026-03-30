@@ -3,10 +3,12 @@ import TrussInputFileReader as tr
 import TrussNode as tn
 import TrussElement as te
 import numpy as np
+import ArgumentParseSetup as args
 
+data_args = args.setup_arguments()
 # Read truss data from sheets 
-node_data = tr.read_data("data/SimpleTrussNodeData.csv");
-element_data = tr.read_data("data/SimpleTrussElementData.csv");
+node_data = tr.read_data(f"../data/{data_args.nodes}")
+element_data = tr.read_data(f"../data/{data_args.elements}")
 
 # Convert data to nodes and elements
 nodes = tn.TrussNode.file_to_truss_node(node_data)

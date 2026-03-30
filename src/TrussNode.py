@@ -1,6 +1,7 @@
+import numpy as np
 # Class with all the data and methods of a node
 class TrussNode:
-    
+
     def __init__(self, name,x, y,restX,restY,extForceX,extForceY):
         self.name = name
         self.x = x
@@ -46,4 +47,4 @@ class TrussNode:
 
 
     def get_node_data_string(self):
-        return f"Node {self.name} has support reactions: ({self.supportReactionX}, {self.supportReactionY}) and displacements: ({self.dispX}, {self.dispY})"
+        return f"Node {self.name} has support reactions: ({np.round(self.supportReactionX, decimals=8)}, {np.round(self.supportReactionY, decimals=8)}) and displacements: ({np.round(self.dispX, decimals=8)}, {np.round(self.dispY, decimals=8)}))"

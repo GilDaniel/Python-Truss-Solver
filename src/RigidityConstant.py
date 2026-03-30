@@ -53,6 +53,6 @@ def find_normal_forces(local_rigidity_matrices,elements,displacements):
         j= element.node2ID
         disp_vector = np.array([displacements[2*i-2],displacements[2*i-1],displacements[2*j-2],displacements[2*j-1]])
         normal_forces.append(local_rigidity_matrices[n] @ disp_vector)
-        element.set_element_normal_force(normal_forces[-1])
+        element.set_normal_force(normal_forces[-1])
         n+=1
     return np.array(normal_forces)
