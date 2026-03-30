@@ -33,7 +33,7 @@ The model assumes linear-elastic material behavior and small deformations.
 
 2. Install dependencies:
    ```bash
-   pip install numpy
+   pip install numpy argparse
    
 3. Clone the repository:
    ```bash
