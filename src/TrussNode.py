@@ -1,4 +1,6 @@
+# Class with all the data and methods of a node
 class TrussNode:
+    
     def __init__(self, name,x, y,restX,restY,extForceX,extForceY):
         self.name = name
         self.x = x
@@ -7,13 +9,20 @@ class TrussNode:
         self.restY = restY
         self.extForceX = extForceX
         self.extForceY = extForceY
+        # Initialize displacements and support reactions with 0, they will be calculated later
+        self.dispX = 0
+        self.dispY = 0
+        self.supportReactionX = 0
+        self.supportReactionY = 0
+
+    
     def file_to_truss_node(fileMatrix):
         trussNodeList = []
         for line in fileMatrix:
             trussNodeList.append(TrussNode(line[0],float(line[1]),float(line[2]),float(line[3]),float(line[4]),float(line[5]),float(line[6])))
         return trussNodeList
     
-    def ext_force_vector(nodes):
+    def get_ext_force_vector(nodes):
         extForceVector = []
         for node in nodes:
             extForceVector.append(node.extForceX)
@@ -34,5 +43,7 @@ class TrussNode:
             i+=1
             node.supportReactionY = support_reactions[i]
             i+=1
+
+
     def get_node_data_string(self):
         return f"Node {self.name} has support reactions: ({self.supportReactionX}, {self.supportReactionY}) and displacements: ({self.dispX}, {self.dispY})"

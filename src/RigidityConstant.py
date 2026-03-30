@@ -1,19 +1,5 @@
 import numpy as np
-
-# Element is an object of TrussElement, points is a list of TrussNode
-def rigidity_constant(element,nodes):
-
-    lengthVector = np.matrix([[nodes[element.node2ID-1].x-nodes[element.node1ID-1].x],[nodes[element.node2ID-1].y-nodes[element.node1ID-1].y]]);
-    length = np.sqrt(lengthVector[0].item()**2 + lengthVector[1].item()**2).item();
-    theta = np.arctan2(lengthVector[1].item(),lengthVector[0].item()).item();
-    k= np.array([ [np.cos(theta)**2,                np.cos(theta)*np.sin(theta),    -np.cos(theta)**2,              -np.cos(theta)*np.sin(theta)],
-                  [np.cos(theta)*np.sin(theta),     np.sin(theta)**2,               -np.cos(theta)*np.sin(theta),   -np.sin(theta)**2],
-                  [-np.cos(theta)**2,               -np.cos(theta)*np.sin(theta),   np.cos(theta)**2,               np.cos(theta)*np.sin(theta)],
-                  [-np.cos(theta)*np.sin(theta),    -np.sin(theta)**2,              np.cos(theta)*np.sin(theta),    np.sin(theta)**2]])
-    
-    return (element.elastic_modulus*element.section_area/length)*np.round(k,decimals=10)
-    
-
+# Functions to manipulate the rigidity constants of the truss elements, and to find the normal forces in each element
 def global_rigidity_matrix_spreading(local_rigidity_matrices,nodes,elements):
     mat_dim = 2*len(nodes)
     global_matrix = np.zeros((mat_dim,mat_dim))
