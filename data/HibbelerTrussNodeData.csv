@@ -2,6 +2,6 @@ Node Name,Node Coordinate X, Node Coordinate Y, Node Restriction X,Node Restrict
 A,0,0,1,1,0,0
 B,3,0,0,0,0,0
 C,6,0,0,0,0,-12000
-D,9,0,0,1,0,0
+D,9,0,1,1,0,0
 G,3,3,0,0,0,0
 E,6,3,0,0,0,0
