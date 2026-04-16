@@ -25,6 +25,7 @@ The model assumes linear-elastic material behavior and small deformations.
 
 ---
 
+
 ## Installation
 
 1. Install Python:  
@@ -32,15 +33,19 @@ The model assumes linear-elastic material behavior and small deformations.
 
 2. Install dependencies:
    ```bash
-   pip install numpy
+   pip install numpy argparse
    
 3. Clone the repository:
    ```bash
     git clone https://github.com/GilDaniel/Python-Truss-Solver.git
 4. Run:
-     ```bash
-    python main.py
-
+  If using the default files 'SimpleTrussNodeData.csv' and 'SimpleTrussElementData.csv' just run: 
+    ```bash
+    python main.py 
+  If you wish to specify your own node data and element data:
+    
+    python main.py --nodes MyNodeDataName.csv --elements MyElementsData.csv
+    
 ## Notes
   Assumes linear-elastic behavior
   Valid for small deformations
