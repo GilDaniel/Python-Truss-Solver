@@ -1,4 +1,4 @@
 Node Name,Node Coordinate X, Node Coordinate Y, Node Restriction X,Node Restriction Y, External Force On Node X, External Force On Node Y
 A,0,0,1,1,0,0
-B,3,0,1,1,-5,6
+B,3,0,0,0,-5000,6000
 C,3,3,1,1,0,0
