@@ -69,7 +69,7 @@ and fourth-power meters for moments of inertia.
   uses the smaller principal section inertia.
 - Euler buckling results describe ideal elastic buckling; they do not account
   for inelastic buckling, imperfections, or design-code resistance factors.
-- Intended primarily for educational use and basic structural analysis.
+- Intended primarily for educational use and basic structural analysis, *no warranty is provided*.
 
 ## License
 
