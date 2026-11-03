@@ -3,6 +3,7 @@ from src import TrussInputFileReader as tr
 from src import TrussNode as tn
 from src import TrussElement as te
 from src import ArgumentParseSetup as args
+from src import TrussPlot as tp
 import numpy as np
 
 data_args = args.setup_arguments()
@@ -12,7 +13,7 @@ element_data = tr.read_data(f"./data/{data_args.elements}")
 
 # Convert data to nodes and elements
 nodes = tn.TrussNode.file_to_truss_node(node_data)
-elements = te.TrussElement.file_to_truss_element(element_data)
+elements = te.TrussElement.file_to_truss_element(element_data, nodes)
 
 # Calculate rigidity matrices for each element
 local_rigidity_matrices = []
@@ -55,3 +56,5 @@ for element in elements:
     print(element.get_data_string(nodes),"\n")
 for node in nodes:
     print(node.get_node_data_string())
+
+tp.TrussPlot(nodes, elements).plot()

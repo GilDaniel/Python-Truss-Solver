@@ -16,11 +16,13 @@ class TrussNode:
         self.supportReactionX = 0
         self.supportReactionY = 0
 
-    
+    def set_id(self,id):
+        self.id = id
     def file_to_truss_node(fileMatrix):
         trussNodeList = []
         for line in fileMatrix:
             trussNodeList.append(TrussNode(line[0],float(line[1]),float(line[2]),float(line[3]),float(line[4]),float(line[5]),float(line[6])))
+            trussNodeList[-1].set_id(len(trussNodeList))
         return trussNodeList
     
     def get_ext_force_vector(nodes):
