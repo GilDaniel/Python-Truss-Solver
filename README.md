@@ -20,6 +20,11 @@ displacements.
     critical buckling stress.
   - Applied X and Y forces are drawn as separate colored arrows.
   - Nodes and restrained supports are marked on the plot.
+ 
+# Examples
+<img width="1507" height="875" alt="image" src="https://github.com/user-attachments/assets/44fbc44f-c824-4c83-8d25-d770374def78" />
+<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/b41c19de-3882-4e93-b643-20bcb3c2a9ef" />
+
 
 ## Requirements
 
