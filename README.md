@@ -20,6 +20,11 @@ displacements.
     critical buckling stress.
   - Applied X and Y forces are drawn as separate colored arrows.
   - Nodes and restrained supports are marked on the plot.
+ 
+# Examples
+<img width="1507" height="875" alt="image" src="https://github.com/user-attachments/assets/44fbc44f-c824-4c83-8d25-d770374def78" />
+<img width="640" height="480" alt="Figure_1" src="https://github.com/user-attachments/assets/c2514408-a1d0-4cd4-8736-5930b1eb48ca" />
+
 
 ## Requirements
 
@@ -64,7 +69,7 @@ and fourth-power meters for moments of inertia.
   uses the smaller principal section inertia.
 - Euler buckling results describe ideal elastic buckling; they do not account
   for inelastic buckling, imperfections, or design-code resistance factors.
-- Intended primarily for educational use and basic structural analysis.
+- Intended primarily for educational use and basic structural analysis, *no warranty is provided*.
 
 ## License
 
