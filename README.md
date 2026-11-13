@@ -23,7 +23,7 @@ displacements.
  
 # Examples
 <img width="1507" height="875" alt="image" src="https://github.com/user-attachments/assets/44fbc44f-c824-4c83-8d25-d770374def78" />
-<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/b41c19de-3882-4e93-b643-20bcb3c2a9ef" />
+<img width="640" height="480" alt="Figure_1" src="https://github.com/user-attachments/assets/c2514408-a1d0-4cd4-8736-5930b1eb48ca" />
 
 
 ## Requirements
